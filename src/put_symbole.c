@@ -5,7 +5,7 @@
 ** Login   <boyeld_p@epitech.net>
 ** 
 ** Started on  Mon Apr 28 23:05:55 2014 Paul BOYELDIEU
-** Last update Tue Apr 29 16:28:39 2014 Paul BOYELDIEU
+** Last update Tue Apr 29 20:00:58 2014 Paul BOYELDIEU
 */
 
 #include	"../includes/morpion.h"
@@ -30,13 +30,14 @@ int		put_symbole(char **grille, char symbole)
 	  else
 	    {
 	      grille[lignes][colones] = symbole;
+	      system("clear");
 	      aff_grille(grille);
+	      test_winner(grille, symbole); 
+	      if (symbole == 'O')
+		symbole = 'X';
+	      else
+		symbole = 'O';
 	    }
-	  test_winner(grille, symbole);
-	  if (symbole == 'O')
-	    symbole = 'X';
-	  else
-	    symbole = 'O';
 	}
       else
 	{
@@ -45,4 +46,3 @@ int		put_symbole(char **grille, char symbole)
 	}
     }
 }
-
