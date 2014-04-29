@@ -5,7 +5,7 @@
 ** Login   <boyeld_p@epitech.net>
 ** 
 ** Started on  Mon Apr 28 10:58:47 2014 Paul BOYELDIEU
-** Last update Mon Apr 28 18:10:02 2014 Paul BOYELDIEU
+** Last update Tue Apr 29 16:17:03 2014 Paul BOYELDIEU
 */
 
 #include	"../includes/morpion.h"

@@ -5,7 +5,7 @@
 ** Login   <boyeld_p@epitech.net>
 ** 
 ** Started on  Mon Apr 28 18:13:24 2014 Paul BOYELDIEU
-** Last update Tue Apr 29 14:53:01 2014 Paul BOYELDIEU
+** Last update Tue Apr 29 16:22:03 2014 Paul BOYELDIEU
 */
 
 #include	"../includes/morpion.h"
@@ -15,14 +15,12 @@ int		test_winner(char **grille, char symbole)
   int		i;
   int		j;
   int		somme;
-  int		somme2;
   int		win;
 
   i = 0;
   j = 0;
   somme = 0;
   win = 0;
-
   while(i < NBLIGNES)
     {
       while(j < NBCOLONES)
@@ -40,7 +38,7 @@ int		test_winner(char **grille, char symbole)
   somme = 0;
   j = 0;
   i = 0;
-  while(j< NBCOLONES)
+  while(j < NBCOLONES)
     {  
       while(i < NBLIGNES)
 	{
