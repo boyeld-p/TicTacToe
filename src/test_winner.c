@@ -5,7 +5,7 @@
 ** Login   <boyeld_p@epitech.net>
 ** 
 ** Started on  Mon Apr 28 18:13:24 2014 Paul BOYELDIEU
-** Last update Tue Apr 29 20:11:10 2014 Paul BOYELDIEU
+** Last update Tue Apr 29 20:28:09 2014 Paul BOYELDIEU
 */
 
 #include	"../includes/morpion.h"
@@ -69,14 +69,7 @@ int		test_winner(char **grille, char symbole)
 	{
 	  while(i < NBLIGNES)
 	    {
-	      somme = somme + grille[i][j];
-	      if (somme == 747 || somme == 756)
-		{
-		  system("clear");
-		  printf("\n\n\nEGALITE\n\n");
-		  exit (0);
-		}
-	      else if(grille[i][j] == ' ')
+	      if(grille[i][j] == ' ')
 		put_symbole(grille, symbole);
 	      else
 		i++;	      
