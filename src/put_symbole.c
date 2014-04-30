@@ -5,7 +5,7 @@
 ** Login   <boyeld_p@epitech.net>
 ** 
 ** Started on  Mon Apr 28 23:05:55 2014 Paul BOYELDIEU
-** Last update Tue Apr 29 20:29:37 2014 Paul BOYELDIEU
+** Last update Wed Apr 30 10:23:35 2014 Paul BOYELDIEU
 */
 
 #include	"../includes/morpion.h"
@@ -21,14 +21,14 @@ int		put_symbole(char **grille, char symbole)
   somme = 0;
   while (42)
     {
-      printf("\nVeuillez donner les numeros de la ligne et de la colonne :");
+      write(1, "\nVeuillez donner les numeros de la ligne et de la colonne :", 59);
       scanf("%d %d", &colones, &lignes);	
       if ((lignes > 0) && (lignes <= NBLIGNES) && (colones>0) && (colones <= NBCOLONES))
 	{
 	  lignes--;
 	  colones--;
 	  if (grille[lignes][colones] != ' ')
-	    printf("La case a deja ete remplie.");
+	    write(1, "La case a deja ete remplie.", 27);
 	  else
 	    {
 	      grille[lignes][colones] = symbole;
@@ -38,7 +38,7 @@ int		put_symbole(char **grille, char symbole)
 	      if (somme == 747 || somme == 756)
 		{
 		  system("clear");
-		  printf("\n\nEGALITE\n\n");
+		  write(1, "\n\nEGALITE\n\n", 11);
 		  exit (0);
 		}
 	      test_winner(grille, symbole); 
@@ -50,7 +50,9 @@ int		put_symbole(char **grille, char symbole)
 	}
       else
 	{
-	  printf("Indice de ligne ou colonne incorrect.");
+	  write(1, "Indice de ligne ou colonne incorrect.", 37);
+	  lignes = 0;
+	  colones = 0;
 	  put_symbole(grille, symbole);
 	}
     }

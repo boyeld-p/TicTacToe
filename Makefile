@@ -5,12 +5,14 @@
 ## Login   <boyeld_p@epitech.net>
 ## 
 ## Started on  Mon Apr 28 10:59:50 2014 Paul BOYELDIEU
-## Last update Tue Apr 29 13:38:19 2014 Paul BOYELDIEU
+## Last update Wed Apr 30 10:09:16 2014 Paul BOYELDIEU
 ##
 
 NAME	=	morpion
 
-SRC	=	src/my_malloc.c		\
+SRC	=	lib/my_putchar.c	\
+		lib/my_putstr.c		\
+		src/my_malloc.c		\
 		src/init_grille.c	\
 		src/aff_grille.c	\
 		src/put_symbole.c	\

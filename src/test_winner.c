@@ -5,7 +5,7 @@
 ** Login   <boyeld_p@epitech.net>
 ** 
 ** Started on  Mon Apr 28 18:13:24 2014 Paul BOYELDIEU
-** Last update Tue Apr 29 20:28:09 2014 Paul BOYELDIEU
+** Last update Wed Apr 30 10:37:02 2014 Paul BOYELDIEU
 */
 
 #include	"../includes/morpion.h"
@@ -59,7 +59,9 @@ int		test_winner(char **grille, char symbole)
     win = 1;
   if(win == 1)
     {
-      printf("Bravo au joueur avec les %c qui a remporté la partie\n", symbole);
+      write(1,"Bravo au joueur avec les ", 25);
+      write(1, &symbole, 1);
+      write(1, " qui a remporté la partie\n", 26);
       exit(1);
     }
   else

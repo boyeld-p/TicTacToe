@@ -5,7 +5,7 @@
 ** Login   <boyeld_p@epitech.net>
 ** 
 ** Started on  Mon Apr 28 10:58:47 2014 Paul BOYELDIEU
-** Last update Tue Apr 29 16:17:03 2014 Paul BOYELDIEU
+** Last update Wed Apr 30 10:40:45 2014 Paul BOYELDIEU
 */
 
 #include	"../includes/morpion.h"
@@ -19,16 +19,18 @@ int		aff_grille(char **grille)
   i = 0;
   j = 0;
 
-  printf("\n --- --- ---\n"); 
+  write(1, "\n --- --- ---\n", 14); 
   while(j < NBCOLONES)
     {
-      printf("|");
+      write(1, "|", 1);
       while(i < NBLIGNES)
 	{
-	  printf(" %c |", grille[i][j]);
+	  write(1, " ", 1);
+	  my_putchar(grille[i][j]);
+	  write(1, " |", 2);
 	  i++;
 	}
-      printf("\n --- --- ---\n"); 
+      write(1, "\n --- --- ---\n", 14); 
       i = 0;
       j++;
     }

@@ -5,7 +5,7 @@
 ** Login   <boyeld_p@epitech.net>
 ** 
 ** Started on  Mon Apr 28 10:48:53 2014 Paul BOYELDIEU
-** Last update Tue Apr 29 19:36:19 2014 Paul BOYELDIEU
+** Last update Wed Apr 30 11:01:12 2014 Paul BOYELDIEU
 */
 
 #include	"../includes/morpion.h"
@@ -23,9 +23,11 @@ int		main(int ac, char **av)
   write(1, "\nVeuillez choisir votre symbole, O ou X :\n", 42);
   while(42)
     {
-      scanf("%c", &symbole);
+      symbole = read(0);
+      //scanf("%c", symbole);
       if (symbole == 'X' || symbole == 'O')
 	put_symbole(grille, symbole);
-      write(1, "\n", 1);
+      else if(symbole != 'X' && symbole != 'O')
+	write(1, "Try Again\n", 11);
     }
 }
